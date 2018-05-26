@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import expenses from '../fixtures/expenses';
 import { ExpensesSummary } from '../../components/ExpensesSummary';
-import expensesTotal from '../../selectors/expenses-total';
+
 
 test('should render ExpensesSummary with 2 expenses totaling $94.34',() => {
     const prop = {
