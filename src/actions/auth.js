@@ -4,6 +4,6 @@ export const startLogin = () => {
     return () => {
         googleAuthProvider.addScope('profile');
         googleAuthProvider.addScope('email');
-        return firebase.auth().signInWithRedirect(googleAuthProvider)
+        return firebase.auth().signInWithPopup(googleAuthProvider)
     }
 }

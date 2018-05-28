@@ -14,7 +14,7 @@ console.log(config.databaseURL)
 firebase.initializeApp(config);
 
 const database = firebase.database();
-var googleAuthProvider   = new firebase.auth.GoogleAuthProvider()
+let googleAuthProvider   = new firebase.auth.GoogleAuthProvider()
 
 export {firebase, googleAuthProvider, database as default}
 // database.ref('expenses').on('child_added', (snapshot) => {
