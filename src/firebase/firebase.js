@@ -1,4 +1,10 @@
-import * as firebase from 'firebase'
+import firebase from 'firebase/app'
+import 'firebase/auth'
+import 'firebase/database'
+
+
+
+
 import { Deflate } from 'zlib';
 // import expenses from '../tests/fixtures/expenses';
 
@@ -10,13 +16,17 @@ const config = {
     storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
     messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
   };
-console.log(config.databaseURL)
+// console.log(config.databaseURL)
 firebase.initializeApp(config);
 
-const database = firebase.database();
-let googleAuthProvider   = new firebase.auth.GoogleAuthProvider()
+const database = firebase.database()
 
-export {firebase, googleAuthProvider, database as default}
+// var googleAuthProvider = new app.auth.EmailAuthProvider.credential(
+//   'ulan.korabay@gmail.com',
+//   'ekfy3103'
+// );
+    
+export { firebase, database as default}
 // database.ref('expenses').on('child_added', (snapshot) => {
 //     console.log(snapshot.key, snapshot.val())
 // })
